@@ -1,0 +1,51 @@
+<!-- index.wxml -->
+<!-- 首页 -->
+<view hidden="{{showclock}}">
+<!-- 滑块 -->
+<view class="slider">
+  <slider min="1" max="60" show-value block-color="white" backgroundColor="silver" value="{{time}}" bindchanging="sliderChange"></slider>
+</view>
+<!-- 滑块 end-->
+
+<!-- 任务模块 -->
+
+<view class="mission-head">
+   <view class="mission-title">选择一个任务</view>
+   <view class="mission-text">接下来的{{time}}分钟内,专注做这件事</view>
+ </view>
+
+<view class="mission-main">
+ <view class="mission-cate" wx:for="{{cateArr}}" bindtap="clickmission" data-index="{{index}}" wx:key="index">
+  <view class="cate-icon"><image src="../../image/{{item.icon}}.svg"></image></view>
+  <view class="cate-text {{index==cateactive ? '.cate-text-active':''}}">{{item.text}}</view>
+</view>
+</view>
+
+<!-- 任务模块end -->
+
+<!-- 开始 --> 
+<view class="btn" bindtap="start">
+开始
+</view>
+<!-- 开始end -->
+</view>
+<!-- 首页end -->
+
+
+<!-- 时钟页 -->
+<view class="clock" hidden='{{!showclock}}' style="height: {{clockheight}}rpx;">
+    <view class="clock-main">
+        <canvas id="clock-bg" class="clock-bg" type="2d"></canvas>   
+        <canvas id="clock-active" class="clock-active" type="2d"></canvas>   
+        <view class="clock-text">{{timestr}}</view>
+    </view>
+    <view class="clock-btn">
+       <view class="back" bindtap="back" wx:if="{{backshow}}">返回</view>
+       <view class="pause" bindtap="pause" wx:if="{{pauseshow}}">暂停</view>
+       <view class="continue-btn"  wx:if="{{continueshow}}">
+         <view class="continue" bindtap="continue">继续</view>
+         <view class="giveup" bindtap="giveup">放弃</view>
+       </view>
+    </view>
+</view>
+<!-- 时钟页end -->

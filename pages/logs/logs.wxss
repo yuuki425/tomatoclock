@@ -1,0 +1,84 @@
+.sum{
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  height: 350rpx;
+  border: 10rpx solid #eeeeee;
+  padding-bottom: 18rpx;
+}
+.sum .sum-item{
+  width: 375rpx;
+  height: 160rpx;
+  text-align: center;
+}
+.sum .sum-item .sum-item-title{
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  color: #6B747E;
+}
+
+.sum .sum-item .sum-item-val{
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #e7624f;
+}
+
+.detail{
+  width: 700rpx;
+  margin: 0 auto;
+}
+.detail-title{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid #e7624f;
+  margin-bottom: 15rpx;
+}
+.detail-title .detail-title-text{
+  flex: 1;
+  font-size: 30rpx;
+
+}
+.detail-title .detail-title-type{
+  flex: 1;
+  text-align: right;
+  font-size: 25rpx;
+}
+
+.detail-title .detail-title-type text{
+  padding-left: 15rpx;
+}
+
+/* .detail-title-line{
+  width: 750rpx;
+  height: 10rpx;
+  background-color: red;
+} */
+
+
+.active{
+  color: #e7624f;
+}
+.list-item{
+  display: flex;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-bottom: 1rpx solid #e9e9eb;
+  margin-bottom: 3rpx;
+}
+.list-item .list-item-date{
+width: 300rpx;
+font-size: 24rpx;
+text-align: left;
+}
+.list-item .list-item-cate{
+  width: 200rpx;
+  font-size: 30rpx;
+  text-align: center;
+  }
+.list-item .list-item-time{
+    width: 200rpx;
+    font-size: 30rpx;
+    text-align: right;
+    }

@@ -1,0 +1,30 @@
+<view class="sum">
+  <view class="sum-item" wx:for="{{sum}}" wx:key="sum">
+    <view class="sum-item-title">{{item.title}}</view>
+    <view class="sum-item-val">{{item.val}}</view>
+  </view>
+</view>
+
+<view class="detail">
+  <view class="detail-title">
+    <view class="detail-title-text">分类统计</view>
+     <view class="detail-title-type">
+      <text class="{{activeIndex == 0 ? 'active':''}}" data-index="0" bindtap="changetype">今日</text>
+      <text class="{{activeIndex == 1 ? 'active':''}}" data-index="1" bindtap="changetype">累计</text>
+      <view class="detail-title-line"></view>
+     </view>
+  </view>
+  <view class="detail-list" wx:if="{{list.length > 0}}"> 
+     <view class="list-item" wx:for="{{list}}" wx:key="cate">
+     <view class="list-item-date">{{item.data}}</view>
+     <view class="list-item-cate">{{cateArr[item.cate].text}} </view>
+     <view class="list-item-time">{{item.time}}分钟 </view>
+     </view>
+  </view>
+
+  <view class="detail-list" wx:if="{{list.length == 0}}">
+     <view>暂无数据</view>
+  </view>
+</view>
+
+
